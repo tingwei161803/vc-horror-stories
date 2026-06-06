@@ -100,6 +100,14 @@
       }).join("") + "</div>";
   }
 
+  /* a region pill (flag + localized label); US is the default if unset */
+  var DEFAULT_REGION = { flag: "🇺🇸", en: "USA", zh: "美國" };
+  function regionBadge(item) {
+    var rg = item.region || DEFAULT_REGION;
+    var flag = rg.flag ? escapeHtml(rg.flag) + " " : "";
+    return '<span class="region">' + flag + escapeHtml(t(rg)) + "</span>";
+  }
+
   /* =======================================================================
      SECTION-TYPE REGISTRY
      ===================================================================== */
@@ -166,6 +174,7 @@
           '<div class="card__head">' +
             '<h3 class="card__title">' + escapeHtml(t(item.founder || item.title)) + "</h3>" +
             (item.handle ? '<span class="card__handle">' + escapeHtml(item.handle) + "</span>" : "") +
+            regionBadge(item) +
           "</div>" +
           (t(item.company) ? '<p class="card__company">' + escapeHtml(t(item.company)) + "</p>" : "") +
           '<p class="card__summary">' + escapeHtml(t(item.summary)) + "</p>" +
@@ -478,12 +487,11 @@
     dialogBody.innerHTML =
       '<header class="dialog__head">' +
         '<h2 id="dialogTitle">' + escapeHtml(t(item.founder || item.title)) + "</h2>" +
-        (item.handle || t(item.company)
-          ? '<p class="dialog__sub">' +
-              (item.handle ? '<span class="dialog__handle">' + escapeHtml(item.handle) + "</span>" : "") +
-              (t(item.company) ? "<span>" + escapeHtml(t(item.company)) + "</span>" : "") +
-            "</p>"
-          : "") +
+        '<p class="dialog__sub">' +
+          regionBadge(item) +
+          (item.handle ? '<span class="dialog__handle">' + escapeHtml(item.handle) + "</span>" : "") +
+          (t(item.company) ? "<span>" + escapeHtml(t(item.company)) + "</span>" : "") +
+        "</p>" +
         (t(item.meta) ? '<p class="dialog__meta">' + escapeHtml(t(item.meta)) + "</p>" : "") +
       "</header>" +
       namedBadges(item.named) +

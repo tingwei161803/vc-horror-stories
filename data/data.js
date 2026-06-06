@@ -27,7 +27,8 @@ window.SITE_THEMES = [
   { key: "bias",       en: "Bias & gatekeeping", zh: "偏見與守門" },
   { key: "absurd",     en: "Absurd & surreal", zh: "荒謬離奇" },
   { key: "power",      en: "Power plays", zh: "權力操弄" },
-  { key: "boundary",   en: "Crossing the line", zh: "越界騷擾" }
+  { key: "boundary",   en: "Crossing the line", zh: "越界騷擾" },
+  { key: "system",     en: "Systemic & structural", zh: "制度之惡" }
 ];
 
 window.SITE_SECTIONS = [
@@ -36,11 +37,11 @@ window.SITE_SECTIONS = [
     type: "hero",
     id: "top",
     title:    { en: "Welcome to the pitch room", zh: "歡迎來到募資會議室" },
-    subtitle: { en: "A viral X thread turned into a confessional: founders, some of them billionaires, recounting venture capital's most cursed moments. Tap any story to read it in full.",
-                zh: "一條在 X 上爆紅的串文,變成了一場集體告解 —— 創辦人(其中不乏億萬富翁)輪流講出創投界最不堪的時刻。點任一則故事,讀完整版。" },
+    subtitle: { en: "A viral X thread turned into a confessional: founders, some of them billionaires, recounting venture capital's most cursed moments — now with chapters from Europe, Japan and Taiwan. Tap any story to read it in full.",
+                zh: "一條在 X 上爆紅的串文,變成了一場集體告解 —— 創辦人(其中不乏億萬富翁)輪流講出創投界最不堪的時刻,如今再補上歐洲、日本與台灣的篇章。點任一則故事,讀完整版。" },
     stats: [
-      { label: { en: "Horror stories", zh: "恐怖故事" },        value: 11 },
-      { label: { en: "Cursed incidents", zh: "恐怖事件" },      value: 18 },
+      { label: { en: "Horror stories", zh: "恐怖故事" },        value: 15 },
+      { label: { en: "Regions", zh: "涵蓋地區" },               value: 5 },
       { label: { en: "Firms named", zh: "被點名創投" },          value: 3 },
       { label: { en: "Views, top post", zh: "最高單篇觀看" },     value: 900000 }
     ]
@@ -61,8 +62,8 @@ window.SITE_SECTIONS = [
                    zh: "拒絕了 Cloudflare,因為他認為「女人無法領導一家安全基礎設施公司」。(共同創辦人為 Michelle Zatlyn。)" },
         by: "Matthew Prince · Cloudflare",
         severity: { en: "Gender bias", zh: "性別偏見" },
-        response: { en: "Current Sequoia partner Shaun Maguire publicly weighed in on the thread.",
-                    zh: "現任 Sequoia 合夥人 Shaun Maguire 在串文下公開回應。" }
+        response: { en: "Current Sequoia partner Shaun Maguire replied that he admires Zatlyn and pressed Prince to name the partner. Prince deflected: “Maybe over a drink one day. But I bet you have a good guess already.”",
+                    zh: "現任 Sequoia 合夥人 Shaun Maguire 回應說他很欣賞 Zatlyn,並追問 Prince 那位合夥人是誰。Prince 打太極:「也許哪天喝一杯時再說吧。但我猜,你心裡已經有答案了。」" }
       },
       {
         name: "a16z (Andreessen Horowitz)",
@@ -71,8 +72,8 @@ window.SITE_SECTIONS = [
                    zh: "一場以為是隨意見面的會,變成整個合夥團隊出席的「推銷會」突襲。其中一人說「你看起來不太有準備」。Prince 把他們寄來的拒絕信裱了起來。" },
         by: "Matthew Prince · Cloudflare",
         severity: { en: "Ambush & condescension", zh: "突襲與輕慢" },
-        response: { en: "Former a16z partner Arianna Simpson also chimed in on the wider thread.",
-                    zh: "前 a16z 合夥人 Arianna Simpson 也在整串討論中發言。" }
+        response: { en: "Former a16z partner Arianna Simpson joined the wider thread with a quip about all the sleeping VCs: “Are VCs ok?? Narcolepsy appears to be running rampant.”",
+                    zh: "前 a16z 合夥人 Arianna Simpson 也加入討論,對滿坑滿谷睡著的創投開玩笑:「創投還好嗎??看來嗜睡症正在大流行。」" }
       },
       {
         name: "Khosla Ventures",
@@ -81,7 +82,8 @@ window.SITE_SECTIONS = [
                    zh: "在給出 C 輪投資條件清單後的晚餐上,趁兩位共同創辦人離席,湊過來提議:把他們解雇,我就把他們的股份全給你。" },
         by: "Matthew Prince · Cloudflare",
         severity: { en: "Splitting the founders", zh: "離間創辦人" },
-        response: null
+        response: { en: "Prince later added nuance: “He's extremely smart/clever. Has been an incredible investor — can't argue with his track record.”",
+                    zh: "Prince 後來補了一句:「他非常聰明、機敏,一直是個了不起的投資人 —— 他的成績單無從反駁。」" }
       }
     ]
   },
@@ -91,8 +93,8 @@ window.SITE_SECTIONS = [
     type: "stories",
     id: "stories",
     title:    { en: "The Stories", zh: "恐怖故事檔案" },
-    subtitle: { en: "Eleven founders, eighteen cursed moments. Filter by the flavour of horror, then tap a card for the full account and its source.",
-                zh: "十一位創辦人,十八個受詛咒的瞬間。用「恐怖類型」篩選,再點開卡片看完整故事與出處。" },
+    subtitle: { en: "Fifteen entries across five regions — the US X thread, plus Europe, Japan and Taiwan. Filter by the flavour of horror, then tap a card for the full account and its source.",
+                zh: "十五則,橫跨五個地區 —— 美國的 X 串文,再加上歐洲、日本與台灣。用「恐怖類型」篩選,再點開卡片看完整故事與出處。" },
     items: [
       {
         slug: "matthew-prince-cloudflare",
@@ -217,6 +219,7 @@ window.SITE_SECTIONS = [
         slug: "anonymous-london",
         founder: { en: "Anonymous founder", zh: "匿名創辦人" },
         handle: "",
+        region:  { flag: "🇬🇧", en: "United Kingdom", zh: "英國" },
         company: { en: "From the same viral thread · London", zh: "出自同一串爆紅串文 · 倫敦" },
         title:   { en: "The London Trilogy", zh: "倫敦三連擊" },
         summary: { en: "Three encounters with London VCs: “you'll fail” (then a DM to join the round), an assistant bragging about squeezing a portfolio company, and a French partner calling the founder's parents “failures.”",
@@ -280,6 +283,78 @@ window.SITE_SECTIONS = [
           zh: "Julie Fredrickson —— 一位後來成為 Chaotic Capital 投資人的創辦人 —— 貢獻了光譜上最超現實的一則:在一場會議之前,她事先收到「提醒」,要注意那家創投辦公室外的一處岩石造景 —— 怎麼說呢,在解剖學上神似男性生殖器。這種細節,往往在你還沒和任何人握手之前,就已經把一家公司的文化說得清清楚楚。\n\n(轉述自 TechCrunch 對該串文的報導。)"
         },
         source: { label: { en: "Via TechCrunch", zh: "經 TechCrunch 報導" }, url: "https://techcrunch.com/2026/06/05/founders-share-vc-horror-stories-and-some-are-naming-names/" }
+      },
+      {
+        slug: "sifted-survey-europe",
+        founder: { en: "Anonymous founders", zh: "匿名創辦人們" },
+        handle: "",
+        region:  { flag: "🇪🇺", en: "Europe", zh: "歐洲" },
+        company: { en: "From Sifted's reader survey · Europe", zh: "出自 Sifted 讀者問卷 · 歐洲" },
+        title:   { en: "The Sifted Files", zh: "Sifted 讀者檔案" },
+        summary: { en: "Fifty-nine European founders answered anonymously. The greatest hits: a VC who yawned eight times, “you must have very understanding husbands,” and being told to go find “greedy investors.”",
+                   zh: "五十九位歐洲創辦人匿名作答。精選輯:打了八次哈欠的創投、「你們的先生一定很體貼吧」,以及被叫去找「貪婪一點的投資人」。" },
+        themes: ["bias", "asleep", "arrogance"],
+        named: [],
+        meta:  { en: "Sifted reader survey · 59 respondents", zh: "Sifted 讀者問卷 · 59 位受訪者" },
+        overview: {
+          en: "Sifted ran the European version of the same confessional — a reader survey of 59 founders. Over 75% said they'd faced arrogant VCs or been ghosted. A sampler, all anonymised:\n\n— Pitching alongside a female co-founder, a male VC offered: “Wow — you must have very understanding husbands.”\n\n— A serial fintech founder's investor “turned up late, asked no questions, explained nothing… and openly yawned eight times.”\n\n— A first-time founder signed a term sheet, then watched a major fund “drag their heels for months” to run the company's cash down — before trying to renegotiate aggressively.\n\n— A female first-time founder was called “silly” for wanting female decision-makers in the room, and told to go find some “greedy investors” instead.\n\n— Another female CEO noticed the VC made eye contact only with her male co-founder, the entire meeting.\n\n— A Black founder with six years' experience and an exit behind them still faced “sexual overtures [and] racist microaggressions.”",
+          zh: "Sifted 做了歐洲版的同款告解 —— 一份 59 位創辦人的讀者問卷。超過 75% 的人說自己遇過傲慢的創投或被已讀不回。以下是匿名摘選:\n\n— 帶著女性共同創辦人去 pitch,一位男性創投說:「哇 —— 你們的先生一定都很體貼吧。」\n\n— 一位連續創業的金融科技創辦人,他的投資人「遲到、不問問題、什麼都不解釋……還公然打了八次哈欠」。\n\n— 一位首次創業者簽了投資條件清單,然後眼睜睜看著一家大型基金「拖了好幾個月」把公司現金耗到見底 —— 接著才來大砍條件、重新談判。\n\n— 一位女性首次創業者,因為希望會議室裡有女性決策者,被說「太天真」,還被叫去找一些「貪婪一點的投資人」。\n\n— 另一位女性執行長發現,整場會議裡創投只跟她的男性共同創辦人有眼神接觸。\n\n— 一位有六年資歷、已經有過一次成功出場的黑人創辦人,仍然遭遇「性暗示與種族微歧視」。"
+        },
+        source: { label: { en: "Sifted · the full survey", zh: "Sifted · 完整問卷報導" }, url: "https://sifted.eu/articles/founders-vc-horror-stories" }
+      },
+      {
+        slug: "japan-strive-scam-angel",
+        founder: "堤 達生 (Tatsuo Tsutsumi)",
+        handle: "STRIVE",
+        region:  { flag: "🇯🇵", en: "Japan", zh: "日本" },
+        company: { en: "STRIVE · a VC warning founders", zh: "STRIVE · 對創辦人示警的創投" },
+        title:   { en: "The ¥1M-for-15% Angel", zh: "「100 萬日圓換 15%」的天使" },
+        summary: { en: "A Tokyo VC went public about a self-styled angel circling young Kyoto founders with a predatory offer: ¥1,000,000 for 15% of the company.",
+                   zh: "一位東京創投公開示警:有個自稱天使的投資人,盯上京都的年輕創辦人,開出掠奪式的條件 —— 100 萬日圓,換公司 15% 股份。" },
+        themes: ["power", "system"],
+        named: [],
+        meta:  { en: "Japan · via The Bridge", zh: "日本 · 經 The Bridge 報導" },
+        overview: {
+          en: "Not every horror story is a sleeping partner — some are predatory terms dressed up as a lifeline. Tatsuo Tsutsumi, a partner at Japanese VC STRIVE, took to social media to warn founders after hearing of a self-proclaimed “individual investor” offering student founders in Kyoto ¥1,000,000 (about US$9,000) in exchange for 15% of their company.\n\nHis warning, paraphrased: handing over equity is “like surrendering a part of your body,” and cap-table decisions “can never be reversed.” These deals prey on inexperienced founders paired with equally inexperienced money — and if that investor later turns difficult, they become, in his words, “a cancer to the corporation.”\n\nThe advice: learn the minimum finance you need to recognise a predatory deal, find real mentors, and lean on legitimate independent VCs' programmes rather than grabbing the first cheque waved in your face.",
+          zh: "不是每個恐怖故事都是睡著的合夥人 —— 有些,是把掠奪式條件包裝成救命繩。日本創投 STRIVE 的合夥人堤達生,在社群媒體上對創辦人示警:他聽說有個自稱「個人投資人」的人,對京都的學生創辦人開出 100 萬日圓(約 9,000 美元)換公司 15% 股份的條件。\n\n他的提醒(大意):讓出股權「就像割讓自己身體的一部分」,而股權結構的決定「永遠無法回頭」。這類交易,專挑沒經驗的創辦人配上同樣沒經驗的錢 —— 一旦那位投資人日後翻臉,用他的話說,就會變成「公司的癌細胞」。\n\n他的建議:把識別掠奪式條件所需的最低財務知識學起來、找到真正的導師,並善用正規獨立創投提供的計畫,而不是抓住第一張在你眼前晃的支票。"
+        },
+        source: { label: { en: "The Bridge · scam angels", zh: "The Bridge · 詐騙天使" }, url: "https://thebridge.jp/2019/09/scam-angels" }
+      },
+      {
+        slug: "japan-funding-traps",
+        founder: { en: "Documented Japanese cases", zh: "日本的真實案例" },
+        handle: "",
+        region:  { flag: "🇯🇵", en: "Japan", zh: "日本" },
+        company: { en: "Japan · startup-finance case studies", zh: "日本 · 新創財務案例" },
+        title:   { en: "Japan's quiet term-sheet traps", zh: "日本的隱形條款陷阱" },
+        summary: { en: "Less theatrical than a sleeping GP, just as deadly: a fund's 5-year clock that forces a sale, and a single clause that froze a pivot for three months.",
+                   zh: "沒有睡著的合夥人那麼戲劇化,卻一樣致命:一支基金 5 年到期的倒數逼公司賣身,以及一條讓轉型卡了三個月的條款。" },
+        themes: ["system", "power"],
+        named: [],
+        meta:  { en: "Japan · documented case studies", zh: "日本 · 公開案例研究" },
+        overview: {
+          en: "Two recurring Japanese fundraising horrors, drawn from startup-finance case studies rather than a viral thread:\n\n— A healthcare startup spent five years building the business. In year five, the investing fund's redemption deadline came due: with no IPO in sight, the founder was pushed to either sell the company or buy back the fund's stake. In the end, they simply closed it down.\n\n— A real-estate startup, backed by several VCs and CVCs, wanted to pivot. The investment agreement required investor sign-off to amend the business plan — so the pivot sat frozen for three months while three firms negotiated their consent.\n\nThe lesson Japanese founders keep relearning: the scariest line in a term sheet is rarely the valuation. It's the clause about redemption deadlines and pre-approval rights — read it with a lawyer, before you sign.",
+          zh: "兩種反覆出現的日本募資恐怖,取自新創財務的案例研究,而非爆紅串文:\n\n— 一家健康照護新創花了五年把事業做起來。到了第五年,投資基金的償還期限到了:在看不到 IPO 的情況下,創辦人被逼著要嘛把公司賣掉、要嘛把基金的股份買回來。最後,他們乾脆把公司收了。\n\n— 一家房地產新創,背後有好幾家 VC 與 CVC。當他們想轉型時,投資合約裡寫著「修改事業計畫需經投資人同意」—— 於是這個轉型整整卡了三個月,只為了讓三家公司談妥各自的同意。\n\n日本創辦人反覆學到的教訓:投資條件清單裡最可怕的一行,往往不是估值,而是關於「償還期限」與「事前同意權」的條款 —— 簽名之前,請和律師一起把它讀完。"
+        },
+        source: { label: { en: "Money Forward · funding failures", zh: "Money Forward · 資金調達失敗案例" }, url: "https://biz.moneyforward.com/establish/basic/76330/" }
+      },
+      {
+        slug: "taiwan-structural",
+        founder: { en: "Raising in Taiwan", zh: "在台灣募資" },
+        handle: "",
+        region:  { flag: "🇹🇼", en: "Taiwan", zh: "台灣" },
+        company: { en: "Taiwan · per VC Gaviann Tseng & angel Elias Ek", zh: "台灣 · 創投 Gaviann Tseng 與天使投資人 Elias Ek 觀點" },
+        title:   { en: "The slow, structural horror", zh: "結構性的慢性恐怖" },
+        summary: { en: "Taiwan had no viral naming-names tweet. Its horror is quieter and structural: risk-averse corporate money, instruments that aren't even legal, and a government review that grinds deals to a crawl.",
+                   zh: "台灣沒有一條爆紅的點名推文。它的恐怖更安靜、更結構性:極度避險的企業資金、連在法律上都不被承認的募資工具,還有把交易拖到龜速的政府審查。" },
+        themes: ["system"],
+        named: [],
+        meta:  { en: "Taiwan · ecosystem account", zh: "台灣 · 生態觀察" },
+        overview: {
+          en: "Taiwan didn't produce a viral “naming names” thread — so this entry is honest about what it is: the structural, slow-burn version of a VC horror story, as described by local VC Gaviann Tseng and angel investor Elias Ek.\n\n— Risk-averse capital. Local investors, especially corporate-VC arms, “don't really take risk.” They want predictable returns or synergy with an existing business, which means many startups must already show revenue and proven fit before anyone writes a cheque.\n\n— Instruments that aren't legal. SAFE and KISS notes — the global default for fast early rounds — have no legal recognition under Taiwan's company law, and a 20% dividend tax on foreign payouts adds friction for overseas investors.\n\n— Bureaucracy as a brake. Investment reviews (e.g. via the MOEA) slow dealmaking considerably. The workaround founders keep choosing: incorporate in Delaware, Singapore or the Cayman/BVI while operating in Taiwan.\n\n— And the founder-side red flags are universal: chasing pitch-competition fame over real traction, and — as Ek puts it — “founders who refuse to listen usually fail.”",
+          zh: "台灣並沒有產生一條爆紅的「點名」串文 —— 所以這一則就誠實地說清楚它是什麼:創投恐怖故事的結構性、慢燒版本,內容取自本地創投 Gaviann Tseng 與天使投資人 Elias Ek 的描述。\n\n— 避險的資金。本地投資人(尤其是企業創投 CVC)「其實不太冒險」。他們要的是可預期的報酬,或與既有事業的綜效 —— 這意味著許多新創必須先做出營收、證明市場契合,才會有人開支票。\n\n— 連法律都不承認的工具。SAFE 與 KISS 這類全球早期募資的預設工具,在台灣公司法下並無法律地位;對境外投資人而言,20% 的境外股利稅又多添了一層摩擦。\n\n— 把交易踩煞車的官僚。投資審查(例如經濟部投審)讓交易明顯變慢。創辦人反覆選擇的繞道方式:在德拉瓦、新加坡或開曼/BVI 設立公司,卻在台灣營運。\n\n— 而創辦人這一側的警訊則放諸四海皆準:追逐 pitch 比賽的名氣勝過真實的成長動能,還有 —— 用 Ek 的話說 ——「不肯聽建議的創辦人,通常都會失敗。」"
+        },
+        source: { label: { en: "Startup funding in Taiwan (interview)", zh: "台灣新創募資(專訪)" }, url: "https://www.erdincekinci.com/post/startup-funding-in-taiwan-how-to-raise-money-with-vc-gaviann-tseng-and-angel-investor-elias-ek" }
       }
     ]
   },
@@ -289,14 +364,15 @@ window.SITE_SECTIONS = [
     type: "bars",
     id: "anatomy",
     title:    { en: "Anatomy of a VC horror", zh: "恐怖類型解剖" },
-    subtitle: { en: "How the eleven stories break down by the flavour of nightmare. “Absurd” wins; “asleep” is a genre unto itself.",
-                zh: "把十一則故事按「惡夢類型」拆開來看。「荒謬離奇」奪冠;而「當場睡著」,自成一個流派。" },
+    subtitle: { en: "How the fifteen stories break down by the flavour of nightmare (a story can carry more than one). “Absurd” still wins; the new Asia chapters pile into “systemic.”",
+                zh: "把十五則故事按「惡夢類型」拆開來看(一則可橫跨多種)。「荒謬離奇」仍然奪冠;新增的亞洲篇章,則把「制度之惡」一舉推高。" },
     series: [
-      { label: { en: "Absurd", zh: "荒謬離奇" },     value: 4 },
-      { label: { en: "Asleep", zh: "當場睡著" },     value: 3 },
-      { label: { en: "Arrogance", zh: "傲慢獨白" },  value: 3 },
-      { label: { en: "Bias", zh: "偏見守門" },       value: 2 },
-      { label: { en: "Power play", zh: "權力操弄" }, value: 1 },
+      { label: { en: "Absurd", zh: "荒謬離奇" },     value: 5 },
+      { label: { en: "Asleep", zh: "當場睡著" },     value: 4 },
+      { label: { en: "Arrogance", zh: "傲慢獨白" },  value: 4 },
+      { label: { en: "Bias", zh: "偏見守門" },       value: 3 },
+      { label: { en: "Power play", zh: "權力操弄" }, value: 3 },
+      { label: { en: "Systemic", zh: "制度之惡" },   value: 3 },
       { label: { en: "Line crossed", zh: "越界騷擾" }, value: 1 }
     ]
   },
@@ -326,7 +402,16 @@ window.SITE_SECTIONS = [
         by: "Isaiah Taylor" },
       { text: { en: "For better or worse, the VC world has changed.",
                  zh: "無論好壞,創投界已經改變了。" },
-        by: "Liz Wessel" }
+        by: "Liz Wessel" },
+      { text: { en: "Are VCs ok?? Narcolepsy appears to be running rampant.",
+                 zh: "創投還好嗎??看來嗜睡症正在大流行。" },
+        by: "Arianna Simpson · former a16z partner" },
+      { text: { en: "Wow — you must have very understanding husbands.",
+                 zh: "哇 —— 你們的先生一定都很體貼吧。" },
+        by: "a male VC, to two female co-founders (via Sifted)" },
+      { text: { en: "Handing over equity is like surrendering a part of your body — and the cap table can never be reversed.",
+                 zh: "讓出股權,就像割讓自己身體的一部分 —— 而股權結構,永遠無法回頭。" },
+        by: "堤 達生 Tatsuo Tsutsumi · STRIVE" }
     ]
   },
 
@@ -354,8 +439,11 @@ window.SITE_SECTIONS = [
         a: { en: "Tries to turn you against your own co-founders, dangling their equity as the prize. Spotted by: Matthew Prince (the Khosla dinner).",
              zh: "試圖挑撥你和共同創辦人的關係,還把對方的股份當成獎品掛在你面前。目擊者:Matthew Prince(Khosla 的那頓晚餐)。" } },
       { q: { en: "🚫 The Boundary-Crosser", zh: "🚫 越界者" },
-        a: { en: "Makes inappropriate comments or advances and treats the pitch like leverage. Spotted by: dax (@thdxr).",
-             zh: "說出不得體的話、做出越界的舉動,還把投資當成籌碼。目擊者:dax(@thdxr)。" } }
+        a: { en: "Makes inappropriate comments or advances and treats the pitch like leverage. Spotted by: dax (@thdxr); and, in Sifted's European survey, a founder who faced sexual overtures and racist microaggressions.",
+             zh: "說出不得體的話、做出越界的舉動,還把投資當成籌碼。目擊者:dax(@thdxr);以及 Sifted 歐洲問卷裡,一位遭遇性暗示與種族微歧視的創辦人。" } },
+      { q: { en: "🏛️ The System", zh: "🏛️ 制度之牆" },
+        a: { en: "Not a person at all — the structural traps: redemption deadlines that force a fire-sale, pre-approval clauses that freeze a pivot, risk-averse local capital, and instruments that aren't even legal where you operate. Spotted in: Japan, Taiwan.",
+             zh: "根本不是某個人,而是結構性的陷阱:逼你賤賣的償還期限、凍結轉型的事前同意條款、極度避險的本地資金,以及在你營運的地方根本不合法的募資工具。出沒地:日本、台灣。" } }
     ]
   },
 
@@ -390,8 +478,8 @@ window.SITE_SECTIONS = [
                "記憶 —— 創辦人什麼都記得,記上十年甚至更久,而他們終究會拿到擴音器。"]
         } },
       { type: "p",
-        text: { en: "A fair caveat: these are founders' one-sided, public recollections, not verified accounts. Several of the named firms have current or former partners who have already responded in the same thread. Read it as folklore with receipts — and decide for yourself.",
-                zh: "也要公允地提醒一句:以上都是創辦人單方面、公開的回憶,並非經過查證的定論。被點名的幾家公司,已有現任或前任合夥人在同一串文裡回應。把它當成「附帶證據的江湖傳說」來讀 —— 然後自己判斷。" } }
+        text: { en: "A fair caveat: the X stories are founders' one-sided, public recollections, not verified accounts — and several named firms have partners who already responded in the thread. The Europe, Japan and Taiwan entries are different in kind: drawn from Sifted's reader survey and documented startup-finance case studies, they trade viral drama for structural truth. Read the whole archive as folklore with receipts — and decide for yourself.",
+                zh: "也要公允地提醒一句:X 上的故事是創辦人單方面、公開的回憶,並非查證後的定論 —— 被點名的幾家公司,已有合夥人在串文裡回應。而歐洲、日本與台灣這幾則性質不同:它們取自 Sifted 的讀者問卷與公開的新創財務案例,用爆紅的戲劇性換來了結構性的真實。把整份檔案當成「附帶證據的江湖傳說」來讀 —— 然後自己判斷。" } }
     ]
   },
 
@@ -400,8 +488,8 @@ window.SITE_SECTIONS = [
     type: "cta",
     id: "source",
     title: { en: "Read the original reporting", zh: "讀原始報導" },
-    text:  { en: "This page collects founders' public X posts (archived locally) alongside TechCrunch's write-up. Stories, quotes and view counts are theirs; the curation and bilingual edit are ours.",
-             zh: "本頁彙整了創辦人在 X 上的公開貼文(本機存檔)與 TechCrunch 的報導。故事、引述與觀看數都屬於原作者;整理與雙語編輯則是我們做的。" },
+    text:  { en: "Sources: founders' public X posts (archived locally) and TechCrunch's write-up; Sifted's European reader survey; The Bridge and Money Forward for Japan; and an interview on raising in Taiwan. Stories, quotes and numbers belong to their authors; the curation and bilingual edit are ours.",
+             zh: "資料來源:創辦人在 X 上的公開貼文(本機存檔)與 TechCrunch 的報導;Sifted 的歐洲讀者問卷;日本部分取自 The Bridge 與 Money Forward;台灣部分取自一篇募資專訪。故事、引述與數字都屬於原作者;整理與雙語編輯則是我們做的。" },
     link:  { label: { en: "TechCrunch · the full article", zh: "TechCrunch · 完整文章" },
              url: "https://techcrunch.com/2026/06/05/founders-share-vc-horror-stories-and-some-are-naming-names/" }
   }
