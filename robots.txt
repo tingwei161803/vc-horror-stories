@@ -1,0 +1,11 @@
+# 創投恐怖故事 · VC Horror Stories
+# 這是一份私人檔案,不歡迎搜尋引擎收錄。
+#
+#   robots.txt (本檔)            → 阻擋「檢索 / crawl」(請爬蟲不要來抓)
+#   index.html <meta robots>     → 阻擋「索引 / index」(請不要列入搜尋結果)
+#
+# 注意:Disallow 會讓守規矩的爬蟲「完全不抓」這頁,因此它也不會看到
+# 頁面裡的 noindex meta。兩者並用是「雙保險」,符合本站「越低調越好」的目的。
+
+User-agent: *
+Disallow: /
