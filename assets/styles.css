@@ -586,3 +586,122 @@ main { position: relative; z-index: 3; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* =========================================================================
+   AUTH GATE — 關鍵字認證門 (auth.js)
+   沿用主題 token (--bg / --surface / --primary …),暗黑配色一致。
+   ========================================================================= */
+
+/* 鎖住時禁止背景捲動 */
+html.is-locked,
+html.is-locked body { overflow: hidden; height: 100%; }
+
+.authgate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    var(--vignette),
+    radial-gradient(120% 90% at 50% -10%, var(--surface-container) 0%, var(--bg) 70%);
+  color: var(--on-bg);
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.authgate--out { opacity: 0; pointer-events: none; }
+
+.authgate__card {
+  width: min(420px, 100%);
+  text-align: center;
+}
+
+.authgate__skull {
+  font-size: 56px;
+  line-height: 1;
+  color: var(--primary);
+  filter: drop-shadow(0 0 18px rgba(227, 75, 60, .35));
+}
+
+.authgate__title {
+  margin: 18px 0 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: .01em;
+}
+
+.authgate__hint {
+  margin: 0 0 22px;
+  color: var(--on-surface-variant);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.authgate__form {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: var(--radius);
+  background: var(--surface-container);
+  border: 1px solid var(--outline-solid);
+  box-shadow: var(--shadow-1);
+}
+
+.authgate__input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+.authgate__input::placeholder { color: var(--muted); }
+.authgate__input:focus { outline: none; }
+
+.authgate__btn {
+  display: inline-grid;
+  place-items: center;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: filter .15s ease, transform .05s ease;
+}
+.authgate__btn:hover { filter: brightness(1.08); }
+.authgate__btn:active { transform: translateY(1px); }
+
+.authgate__error {
+  margin: 14px 0 0;
+  color: var(--error);
+  font-size: .9rem;
+  min-height: 1.2em;
+}
+
+.authgate__footnote {
+  margin: 26px 0 0;
+  color: var(--muted);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+/* 答錯時的抖動 */
+.authgate__form--shake {
+  animation: authShake .4s cubic-bezier(.36, .07, .19, .97);
+  border-color: var(--error);
+}
+@keyframes authShake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-5px); }
+  40%, 60% { transform: translateX(5px); }
+}

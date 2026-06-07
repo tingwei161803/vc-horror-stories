@@ -581,9 +581,14 @@
     syncFromHash();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
+  // 認證門:auth.js 會設 window.__AUTH_GATE,並在解鎖後呼叫 __BOOT_APP()。
+  // 沒有門 (__AUTH_GATE 未設) 時維持原本「載入即渲染」的行為。
+  window.__BOOT_APP = init;
+  if (!window.__AUTH_GATE) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
   }
 })();

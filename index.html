@@ -50,6 +50,28 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <!-- ==== Auth gate (關鍵字認證門,見 assets/auth.js) ==== -->
+  <div class="authgate" id="authGate">
+    <div class="authgate__card">
+      <div class="authgate__skull material-symbols-rounded">skull</div>
+      <h1 class="authgate__title">創投恐怖故事</h1>
+      <p class="authgate__hint">
+        這是一份私人檔案,請輸入關鍵字進入。<br />
+        A private archive — enter the keyword to continue.
+      </p>
+      <form class="authgate__form" id="authForm" autocomplete="off">
+        <input class="authgate__input" id="authInput" type="password"
+               placeholder="關鍵字 / keyword" aria-label="關鍵字 / keyword"
+               autocomplete="off" spellcheck="false" />
+        <button class="authgate__btn" type="submit">進入</button>
+      </form>
+      <p class="authgate__error" id="authError" role="alert" hidden>
+        關鍵字不正確。Wrong keyword.
+      </p>
+      <p class="authgate__footnote">內容版權皆屬原作者。</p>
+    </div>
+  </div>
+
   <!-- ==== App bar ==== -->
   <header class="appbar">
     <div class="appbar__inner">
@@ -99,7 +121,8 @@
     <p id="footerText">一份經過整理的雙語檔案,收錄創辦人公開分享的創投恐怖故事。故事版權皆屬原作者。</p>
   </footer>
 
-  <!-- ==== Scripts (order matters: data first) ==== -->
+  <!-- ==== Scripts (order matters: auth gate → data → app) ==== -->
+  <script src="assets/auth.js"></script>
   <script src="data/data.js"></script>
   <script src="assets/app.js"></script>
 </body>
