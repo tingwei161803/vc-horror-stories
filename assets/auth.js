@@ -46,6 +46,11 @@
   function unlock(remember) {
     if (remember) {
       try { store.setItem(STORE_KEY, "1"); } catch (_) { /* 隱私模式可能擋 */ }
+      // GA4:只在「真的輸對關鍵字進來」時送一次事件(同分頁已記住的重載不算)。
+      // 搭配自動的 page_view(在登入畫面就送)可區分「到門口」vs「真進來」。
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "unlock", { method: "keyword" });
+      }
     }
     const gate = document.getElementById("authGate");
     if (gate) {
