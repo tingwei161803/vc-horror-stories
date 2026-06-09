@@ -10,7 +10,7 @@
 
 | | 網址 |
 |---|---|
-| 🌐 網站 | <https://tingwei161803.github.io/vc-horror-stories/> |
+| 🌐 網站 | <https://vc-horror-stories.peteraim.com/> |
 
 > ⚠️ 本站設有**關鍵字認證門** —— 需先輸入關鍵字才能看到內容,直接點進去會先看到登入畫面。
 
